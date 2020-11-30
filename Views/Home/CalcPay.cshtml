@@ -1,0 +1,44 @@
+﻿@model DetectiveAgency.Models.Employee
+@{
+    ViewBag.Title = "Future Value Calculator";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>New Employee Form</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="row">
+        <h1 class="col-md-12">Future Value Calculator</h1>
+        <form asp-action="Index" method="post" class="col-md-6">
+            <div asp-validation-summary="All"></div>
+            <div>
+                <label asp-for="Id">Id:</label>
+                <input asp-for="Id" />
+            </div>
+            <div>
+                <label asp-for="Name">Name:</label>
+                <input asp-for="Name" />
+            </div>
+            <div>
+                <label asp-for="Hours">Hours:</label>
+                <input asp-for="Hours" />
+            </div>
+            <div>
+                <label asp-for="Rate">Rate:</label>
+                <input asp-for="Rate" />
+            </div>
+            <div>
+                <label asp-for="CalcSalary">Weekly Gross Pay:</label>
+                <input asp-for="CalcSalary" />
+            </div>
+            <button type="button"> Caculate Gross Pay</button>
+            <button asp-controller="Home" asp-action="Index">Clear</button>
+        </form>
+    </div>
+</body>
+</html>
